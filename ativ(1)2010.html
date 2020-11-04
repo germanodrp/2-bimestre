@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    1) Faça uma página html5 com 6 caixas de texto que solicite o usuário com 6 números
+    para serem sorteados na mega sena. Ao clicar no botão o seu algoritmo deve
+    responder quantos números ele acertou e se ele ganhou na mega sena.
+
+    <h1>Jogue na Mega-sena</h1>
+
+<h3>jogue seu numero:</h3>
+    <br>
+    <h1 > Jogar na mega sena </h1 >
+    <h3 > Faça o seu jogo: </h3 >
+    <input  id = " txtPrimeroNumeroJogado "   type = " number "   name = " numerosJogados " />
+    <input  id = " txtSegundoNumeroJogado "   type = " number "   name = " numerosJogados " />
+    <input  id = " txtTerceiroNumeroJogado " type = " number "   name = " numerosJogados " />
+    <input  id = " txtQuartoNumeroJogado "    type = " number "   name = " numerosJogados " />
+    <input  id = " txtQuintoNumeroJogado "    type = " number "   name = " numerosJogados " />
+    <input  id = " txtSextoNumeroJogado "     type = " number "   name = " numerosJogados " />
+ 
+
+
+    <button id="botao1" onclick="sortearNumero()">Jogar</button>
+
+
+    <script>
+
+function sortearNumero(){
+   
+    var  arrayNumerosSorteados  =  [ ] ;
+            var  numeroSorteado  =  0 ;
+            while  ( arrayNumerosSorteados . comprimento  <  6 ) {
+                numeroSorteado  =  Matemática . chão ( matemática . aleatório ( ) * 60 + 1 ) ;            
+                if ( arrayNumerosSorteados . indexOf ( numeroSorteado )  ===  - 1 ) {
+                    arrayNumerosSorteados . push ( numeroSorteado ) ;
+                }
+           }
+         
+           var  arrayNumeroJogados =  document.getElementsByName( "numerosJogados" )
+           var  numeroArrayJogado  =  0 ;       
+           var  arrayNumerosAcertados  =  [ ] ;
+           console . log ( arrayNumeroJogados ) ;
+           console . log ( arrayNumerosSorteados ) ;
+           
+           for ( var  contador = 0 ;  contador  <  arrayNumeroJogados . length ;  contador ++  ) {
+                 numeroArrayJogado    =   parseInt ( arrayNumeroJogados [ contador ] . value ) ;
+                 if ( arrayNumerosSorteados . indexOf ( numeroArrayJogado ) === - 1 ) {
+                    arrayNumerosAcertados . push ( numeroArrayJogado ) ;
+                }
+           }
+           alert ( `Você acertou ${ arrayNumerosAcertados . length } ` ) ;
+           console . log ( `Você acertou os números ${ arrayNumerosAcertados } ` ) ;
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

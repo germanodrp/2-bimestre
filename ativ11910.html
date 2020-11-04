@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p  id = " paragrafo1 " name = " paragrafo1 " > Olá </p >
+    <input  id = " txtNome " type = " text " placeholder = " Digite seu nome " />
+    <input  id = " txtIdade " type = " number " placeholder = " Digite sua idade " />
+    <input  id = " txtDataNascimento " type = " date " placeholder = " Digite sua data de nascimento " />
+    <p > Escolha seu tempo: </p >
+    <input  type = " radio " id = " timeAtletico " name = " timesFutebol " verificado  valor = " Atlético " /> Atlético / MG
+    <input  type = " radio " id = " timeAmerica " name = " timesFutebol " value = " América " /> América / MG
+    <input  type = " radio " id = " timeCruzeiro " name = " timesFutebol " value = " Cruzeiro " /> Cruzeiro
+    <input  type = " radio " id = " timeOutro " name = " timesFutebol " value = " Outro " /> Outro
+    <p > Escolha seus hobbies: </p>>
+    <input  type = " checkbox " id = " ckViajar " /> Viajar
+    <input  type = " checkbox " id = " ckViajar " /> Ler livros
+    <input  type = " checkbox " id = " ckViajar " /> Fazer churrasco
+
+    <button  id = " botao1 " onclick = " alterarTextoParagrafo () " > Clique Aqui </button >
+
+    <script >
+        function  alterarTextoParagrafo ( )  {
+            var  paragrafo  =  document . getElementById ( "paragrafo1" ) ;
+            var  nome  =  documento . getElementById ( "txtNome" ) . valor ;
+            var  idade  =  documento . getElementById ( "txtIdade" ) . valor ;
+            paragrafo . innerHTML  =  `Você clicou $ { nome } e o dobro da sua idade é $ { idade * 2 } !` ;
+
+            var  arrayTimesFutebol  =  document . getElementsByName ( "timesFutebol" ) ;
+            console . log ( arrayTimesFutebol ) ;
+            for  ( var  contador  =  0 ;  contador  <  arrayTimesFutebol . length ;  contador ++ )  {
+                if  ( arrayTimesFutebol [ contador ] . verificado )  {
+                    console . log ( `Escolheu $ { arrayTimesFutebol [ contador ] . valor } ` ) ;
+                }
+            }
+
+
+
+            // innerHTML o texto html do elemento
+        }
+    </script>
+</body>
+</html>

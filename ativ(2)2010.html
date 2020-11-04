@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    2) Faça um site para fazer o calculo do IMC do cliente solicitando o seu nome e peso,
+altura e escreva na tela qual é a faixa obtida.
+
+<br>
+<p id="paragrafo1" name="paragrafo1">Olá</p>
+<input id ="txtNome" type="text" placeholder="digite seu nome "/>
+<input id ="txtPeso" type="text" placeholder=" digite seu peso "/>
+<input id ="txtAltura" type="text" placeholder="digite sua altura "/>
+<br>
+<button  onclick="calcularIMC()">calcular</button>
+
+
+<script>
+ function calcularIMC(){
+    var paragrafo = document.getElementById("paragrafo1");
+    paragrafo.innerHTML = "Você clicou!";
+
+    var altura= parseFloat (document.getElementById("txtAltura")).value;
+    var Peso = parseFloat(document.getElementById("txtPeso")).value;
+     altura= (altura*100)/100
+    var nome= document.getElementById("txtNome").value;
+ 
+    var imc= (peso/(altura*altura))
+
+
+ 
+
+ if(imc<18.5)
+            {
+                Console.WriteLine("Peso abaixo do normal");
+            }
+             else if ((imc ==18.5) || (imc  ==25))
+            {
+                Console.WriteLine("Peso normal");
+            }
+              if ((imc > 25) || (imc ==30))
+ 
+            {
+                Console.WriteLine("Sobre o Peso");
+            }
+              else if ((imc > 30) || (imc ==35))
+            {
+                Console.WriteLine("Grau de Obesidade I");
+            }
+              if ((imc > 35) ||  (imc ==40))
+            {
+                Console.WriteLine("Grau de Obesidade II");
+            }
+             else if (imc >40)
+            {
+                Console.WriteLine("Obesidade Grau III");
+            }
+ 
+
+        }
+
+       
+
+
+
+</script>
+
+    
+
+</body>
+</html>

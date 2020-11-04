@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    3) Faça um site que o cliente tenha uma lista de produtos. Segue as opções:
+a. Produto 1: 100 reais
+b. Produto 2: 200 reais
+c. Produto 3: 300 reais
+Depois de escolher o produto acima outra lista com as 3 opções:
+d. A vista 10%
+e. Cartão de debito: 5%
+f. Cartão de crédito 1x: sem juros
+g. Cartão de crédito 2x: 5% ao valor do produto.
+E um botão de calcular o preço final que faça as ações baseado nas opções acima.
+    
+<p id="paragrafo1" name="paragrafo1">Olá</p>
+<h3> fones de ouvidos R$ 100,00</h3><br>
+<h3>som R$ 200,00</h3><br>
+<h3>telefone R$300,00</h3><br>
+
+
+
+<p>escolha seu produto</p>
+<input type="radio" id="fonesDeOuvido" name="produto" value="100.00"/> Fone de ouvido 
+<input type="radio" id="som" name="produto" value="200.00"/>som
+<input type="radio" id="telefone" name="produto" value="300.00"/>telefone
+
+<p>escolha a forma de pagamento</p>
+<input type="radio" id="aVista" name="pagamento"/> A vista com 10%<br>
+<input type="radio" id="cartaoDebito" name="pagamento"/>Cartão de Debito com 5%<br>
+<input type="radio" id="cartaoCredito1x" name="pagamento"/>Cartão de Credito em 1x sem juros <br>
+<input type="radio" id="cartaoCredito2x" name="pagamento"/>Cartão de Credito em 2x com juros de 5% <br>
+
+
+
+<button id="botao1" onclick="calculoDeProdutos()"> calcular </button>
+
+<script>
+    
+    function calculoDeProdutos() {
+
+        var valor= document.getElementsByClassName("pagamento")
+        var produto=document.getElementsByClassName("produto")
+
+        document.getElementById("aVista")= 0.10
+        document.getElementById("cartaoDebito")=0.05
+        
+
+
+
+
+        var  arrayProdutos  =  document . getElementsByName ( "produto" ) ;
+            console . log ( arrayProdutos) ;
+           
+            for  ( var  contador  =  0 ;  contador  <  arrayProdutos . length ;  contador ++ )  {
+                if  ( arrayProdutos [ contador ] . verificado )  {
+                    console . log ( `Escolheu ${ arrayProdutos [ contador ] . valor } ` ) ;
+                }
+            }
+        
+    }
+</script>
+
+
+
+
+
+</body>
+</html>

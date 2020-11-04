@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<scri>, initial-scale=1.0">
+    <title>Document</title>
+</head>     
+<body>
+    <p id="paragrafo1" name="paragrafo1">Olá</p>
+    <input id ="txtNome" type="text"/ placeholder="digite seu nome ">
+    <input id ="txtIdade" type="number" placeholder="digite sua idade"/>
+    <input id ="txtDataNascimento" type="date" placeholder="digite sua data de nascimento "/>
+    
+   
+    <p>escolha seu time </p>
+    <input type="radio" id="timeAtletico" name="timesDeFutebol"/>atletico-MG
+    <input type="radio" id="timeCruzeiro" name="timesDeFutebol"/>Cruzeiro
+    <input type="radio" id="outro" name="timesDeFutebol"/>Outro
+   
+
+    <button id="botao1" onclick="alterarTextoParagrafo()">Clique Aqui</button>
+   
+   <script>
+        function alterarTextoParagrafo() {
+            var paragrafo = document.getElementById("paragrafo1");
+            paragrafo.innerHTML = "Você clicou!";
+
+            var nome = document.getElementById("txtNome").value;
+            var idade = document.getElementById("txtIdade").value;
+
+            paragrafo.innerHTML = `Você clicou ${nome}! e sua idade ${idade *2}!;
+`
+            
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>
